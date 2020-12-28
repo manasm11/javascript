@@ -1,0 +1,8 @@
+- [ ] Two types of export elements
+  - [ ] default export
+    - [ ] Has to be unique
+    - [ ] Can be renamed while importing just by defining new_name.
+  - [ ] export
+    - [ ] Can be multiple
+    - [ ] Need to be imported inside {}
+    - [ ] Can be renamed by using as keyword

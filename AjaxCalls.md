@@ -17,12 +17,19 @@
     - [ ] Preferably used to stop loader and render the data.
   - [ ] **.send** : Call the function without any arguments.
     - [ ] To send the request. 💁
+  - [ ] .onerror : Assign a function.
+    - [ ] Executes when any error occurs while sending/getting request.
+    - [ ] Usually handled with some alert messages.
   - [ ] **.onreadystatechange** : Assign a function.
     - [ ] **OLD METHOD**
     - [ ] There are 5 ready states (0-4).
     - [ ] They can be accessed by xhr.readyState.
     - [ ] The function is executed each time ready state changes.
     - [ ] readyState = 4 means ajax call completed.
+  - [ ] **.setRequestHeader** : Set headers in the request.
+    - [ ] Headers are key value pairs that provide details for the request.
+    - [ ] .setRequestHeader("HTTP_X_REQUESTED_WITH", "XMLHttpRequest")
+    - [ ] .setRequestHeader("X-Requested-With", "XMLHttpRequest")
 - [ ] URLS to play with ajax get request
   - [ ] To play with random data with random fields, http://www.dummy.restapiexample.com/.
   - [ ] To create a api with random data with specific fields,
