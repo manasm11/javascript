@@ -16,3 +16,18 @@
 
 - [ ] Add `node_modules/` to .gitignore.
   - [ ] Or just copy the .gitignore file from the project created by .gitignore in the project one.
+
+#### Importing modules in react
+- [ ] If in documentation, its written,
+  - [ ] var package = require('package') => import package from 'package'
+  - [ ] var {package} = require('package') => import {package} from 'package'
+
+### List of Useful Libraries
+- [ ] numeral : To display large numbers in human readable format.
+  - [ ] npm install numeral
+  - [ ] import numeral from numeral
+  - [ ] numeral(large_number).format('0.0a') // refer to doc for formats.
+- [ ] highlight : To display codes of different languages with better syntax highlighting.
+  - [ ] npm install highlight.js
+  - [ ] Go to official page for custom download and usage.
+- [ ] reactstrap : Bootstrap in react.

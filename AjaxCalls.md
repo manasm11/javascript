@@ -12,6 +12,9 @@
   - [ ] **.onprogress** : Assign a function (optional)
     - [ ] Executes when xhr.send() is called.
     - [ ] Preferably used to initiate loaders.
+  - [ ] **.responseType**
+    - [ ] = 'json' 
+    - [ ] This allows to omit the response conversion by JSON.parse.
   - [ ] **.onload** : Assign a function.
     - [ ] Executes when ajax call is completed.
     - [ ] Preferably used to stop loader and render the data.
@@ -20,6 +23,8 @@
   - [ ] .onerror : Assign a function.
     - [ ] Executes when any error occurs while sending/getting request.
     - [ ] Usually handled with some alert messages.
+  - [ ] **.onerror**
+    - [ ] Usually executes if there is some connection issue.
   - [ ] **.onreadystatechange** : Assign a function.
     - [ ] **OLD METHOD**
     - [ ] There are 5 ready states (0-4).
@@ -30,6 +35,7 @@
     - [ ] Headers are key value pairs that provide details for the request.
     - [ ] .setRequestHeader("HTTP_X_REQUESTED_WITH", "XMLHttpRequest")
     - [ ] .setRequestHeader("X-Requested-With", "XMLHttpRequest")
+    - [ ] .setRequestHeader("Content-Type", "application/json") // Only in POST request.
 - [ ] URLS to play with ajax get request
   - [ ] To play with random data with random fields, http://www.dummy.restapiexample.com/.
   - [ ] To create a api with random data with specific fields,

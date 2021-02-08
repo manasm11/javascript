@@ -6,8 +6,8 @@ function App() {
   const [row1Data, setRow1Data] = useState({value:0, currency:"INR"})
   const [row2Data, setRow2Data] = useState({value:0, currency:"INR"})
 
-  const [isRow1changed, setIsRow1] = useState(false)
-  const [isRow2changed, setIsRow2] = useState(false)
+  const [isRow1, setIsRow1] = useState(false)
+  const [isRow2, setIsRow2] = useState(false)
   const [rates, setRates] = useState({"INR":1})
   useEffect(() => {
     const xhr = new XMLHttpRequest();
@@ -24,12 +24,18 @@ function App() {
   // row2func = ()=>updateValues(false)
 
   useEffect(()=>{
-    updateValues(isRow1)
-  }, [row1Data, row2Data])
+    if(isRow1){
+      setIsRow1(false);
+    updateValues(isRow1);
+  }
+  }, [row1Data, isRow1])
 
-  // useEffect(()=>{
-  //   updateValues(false)
-  // }, [])
+  useEffect(()=>{
+    if(isRow1){
+      setIsRow2(false);
+    updateValues(false);
+    }
+  }, [row2Data, isRow2])
   function updateValues(is_first_row){
     const index = String(is_first_row)
     const func = {
@@ -54,9 +60,9 @@ function App() {
   return (
     <>
       <h1>Convert Currency</h1>
-      <CurrencyRow rates={rates} row_num={1} data={row1Data} setData={setRow1Data} onRowChange={()=>updateValues(true)}/>
+      <CurrencyRow rates={rates} row_num={1} data={row1Data} ss1={setIsRow1} ss2={setIsRow2} setData={setRow1Data} onRowChange={()=>updateValues(true)}/>
       <div>=</div>
-      <CurrencyRow rates={rates} row_num={2} data={row2Data} setData={setRow2Data} onRowChange={()=>updateValues(false)}/>
+      <CurrencyRow rates={rates} row_num={2} data={row2Data} ss1={setIsRow1} ss2={setIsRow2} setData={setRow2Data} onRowChange={()=>updateValues(false)}/>
     </>
   );
 }

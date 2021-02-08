@@ -2,6 +2,8 @@ export function check(condition, message, variable){
     if (condition) return true
     console.trace()
     console.log('variable=', variable);
+
+    
     throw message
 }
 

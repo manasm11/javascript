@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CurrencyRow({rates, data, setData, onRowChange, row_num, setIsRow1, setIsRow2}) {
+function CurrencyRow({rates, data, setData, onRowChange, num_row, ss1, ss2}) {
     console.log(data)
     const f=(e)=>{
             console.log(e.target);
@@ -12,10 +12,10 @@ function CurrencyRow({rates, data, setData, onRowChange, row_num, setIsRow1, set
                 onChange={(e)=> { 
                     setData({...data, value:e.target.value});
                     if(num_row == 1){
-                        setIsRow1(true);
+                        ss1(true);
                     }
                     else{
-                        setIsRow2(true);
+                        ss2(true);
                     }
                 
                 }
