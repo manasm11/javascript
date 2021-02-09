@@ -1,4 +1,4 @@
-import { assert } from "../../../utils";
+import assert from "_assertions";
 import * as styles from "./styles";
 
 export default function Todo({todo}){

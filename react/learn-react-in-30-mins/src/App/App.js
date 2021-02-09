@@ -7,10 +7,7 @@ import * as u from './utils'
 
 function App() {
   const STORAGE_KEY = 'todoApp.todos'
-  const [todos, setTodos] = useState([
-    {id:1, name:'Manas', complete:true},
-    {id:1, name:'Mishra', complete:false}
-  ])
+  const [todos, setTodos] = useState([])
   const nameInputRef = useRef()
 
   useEffect(()=>{

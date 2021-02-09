@@ -1,4 +1,4 @@
-import * as assert from '../utils/assertions'
+import assert from '_assertions'
 
 export function saveToLocalStorage(variable, STORAGE_KEY){
     assert.checkDefined(variable)
