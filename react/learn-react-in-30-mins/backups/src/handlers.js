@@ -1,9 +1,9 @@
 import {v4} from 'uuid'
-import assert from '_assertions'
+import assert from './assertions'
 
 export function handleAddTodo(setTodos, nameInputRef){
-    // assert.checkFunc(setTodos)
-    // assert.checkObj(nameInputRef)
+    assert.checkFunc(setTodos)
+    assert.checkObj(nameInputRef)
     setTodos(prevTodos => {
         assert.checkArr(prevTodos)
         const newTodo = {
