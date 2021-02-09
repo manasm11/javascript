@@ -1,2 +1,2 @@
-import * as assert from './assertions'
-export default assert
+assert = require('./assertions')
+module.exports = assert
