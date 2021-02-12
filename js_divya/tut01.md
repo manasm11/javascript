@@ -6,8 +6,8 @@
   - [x] handling
 - [x] import-export
 - [x] destructuring
-- [ ] function
-- [ ] lambda functions
+- [x] function
+- [x] lambda functions
 - [ ] async functions
   - [ ] dots can be distributed through multiple lines.
   - [ ] promises
