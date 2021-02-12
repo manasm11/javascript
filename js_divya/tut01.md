@@ -1,0 +1,15 @@
+- [x] var, const etc
+- [x] typeof operator
+  - [x] array is special type of object
+- [x] errors
+  - [x] throwing
+  - [x] handling
+- [x] import-export
+- [x] destructuring
+- [ ] function
+- [ ] lambda functions
+- [ ] async functions
+  - [ ] dots can be distributed through multiple lines.
+  - [ ] promises
+- [ ] callback functions
+  - [ ] coolest idea !!!
