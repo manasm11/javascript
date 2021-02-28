@@ -6,4 +6,15 @@ function printPersonDetails(name, age, weight, height){
   console.log("height:", arguments[3])
 }
 printPersonDetails("Manas", 22, 82, 140)
-printPersonDetails("Human", 21, 70)
+// printPersonDetails("Human", 21, 70) //Throws error
+
+// MISC
+function printColors(){
+  console.log('')
+  for(let i in arguments){
+    console.log(arguments[i])
+  }
+}
+printColors('red')
+printColors('red', 'blue')
+printColors('red', 'blue', 'green')
