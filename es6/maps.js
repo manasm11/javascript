@@ -6,6 +6,19 @@ m.set(true, "Sahi me !!!")
 console.log(m.size)
 console.log(m.get('fname'))
 console.log(m.has('fname'))
+
+console.log('')
+for(let key of m.keys())
+  console.log(key)
+
+console.log('')
+for(let val of m.values())
+  console.log(val)
+
+console.log('')
+for(let [key, value] of m.entries())
+  console.log(key, value)
+
 m.clear();
 console.log(m.size)
 
