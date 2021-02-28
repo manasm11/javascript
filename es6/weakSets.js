@@ -1,4 +1,5 @@
 // Removes from set if all references are removed
+// More memory efficient
 ws = new WeakSet()
 let key = {}
 ws.add(key)
