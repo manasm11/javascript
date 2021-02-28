@@ -7,4 +7,6 @@ console.log(s.has("Bye"))
 s.delete(true)
 s.delete(false)
 console.log(s.size)
+console.log(s)
+console.log([...s])
 
