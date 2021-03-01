@@ -2,3 +2,5 @@
 - spread operator
 - string templates
 - modules
+- for-of loops
+- generators
