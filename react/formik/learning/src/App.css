@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+  justify-content: center;
+  /* align-items: stretch; */
+  width: 100%;
+}
+
+form {
+  display: block;
+}
+
+label {
+  font-weight: bold;
+  font-size: 3ch;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: rgb(148, 143, 143);
+  line-height: 50px;
+}
+
+button {
+  font-size: 20px;
+}
+
+.form-control{
+  margin-bottom: 50px;
+  display: block;
+}
+
+.error-message {
+  color: red;
+}
