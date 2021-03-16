@@ -2,7 +2,6 @@ import React from 'react';
 import {Field} from 'formik'
 
 function RadioButtons({ label, name, options, ...rest }) {
-  console.log(options)
   return (
     <div className='form-control'>
       <label htmlFor={name}>{label}</label>

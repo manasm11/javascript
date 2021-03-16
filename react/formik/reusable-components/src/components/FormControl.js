@@ -3,6 +3,7 @@ import Input from './Input';
 import TextArea from './TextArea';
 import Select from './Select'
 import RadioButtons from './RadioButtons'
+import CheckBoxGroup from './CheckBoxGroup'
 
 function FormControl({ control, ...rest }) {
   switch (control) {
@@ -15,6 +16,7 @@ function FormControl({ control, ...rest }) {
     case 'radio':
       return <RadioButtons {...rest} />
     case 'checkbox':
+      return <CheckBoxGroup {...rest} />
     case 'date':
     default:
       return null;
