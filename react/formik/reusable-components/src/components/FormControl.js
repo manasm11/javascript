@@ -4,6 +4,7 @@ import TextArea from './TextArea';
 import Select from './Select'
 import RadioButtons from './RadioButtons'
 import CheckBoxGroup from './CheckBoxGroup'
+import DatePicker from './DatePicker'
 
 function FormControl({ control, ...rest }) {
   switch (control) {
@@ -18,6 +19,7 @@ function FormControl({ control, ...rest }) {
     case 'checkbox':
       return <CheckBoxGroup {...rest} />
     case 'date':
+      return <DatePicker {...rest} />
     default:
       return null;
   }

@@ -9,7 +9,8 @@ function FormikContainer({ setLoading }) {
     description: '',
     selectOption: '',
     radioOption: '',
-    checkboxOption: ''
+    checkboxOption: '',
+    birthdate: null
   };
   const onSubmit = (values, form) => {
     setLoading(true);
@@ -24,7 +25,8 @@ function FormikContainer({ setLoading }) {
     description: yup.string().required('Required'),
     selectOption: yup.string().required('Required'),
     radioOption: yup.string().required('Required'),
-    checkboxOption: yup.array().required('Required')
+    checkboxOption: yup.array().required('Required'),
+    birthdate: yup.date().required('Required').nullable()
   });
   const options = [
     { key: 'Select an option', value: '' },
@@ -77,6 +79,13 @@ function FormikContainer({ setLoading }) {
               label='Checkbox Options'
               options={radioOptions}
             />
+
+            <FormControl
+              control='date'
+              name='birthdate'
+              label='Birth Date'
+            />
+
             <button
               disabled={!formik.isValid || formik.isSubmitting}
               type='submit'
