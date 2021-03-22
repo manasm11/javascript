@@ -1,0 +1,6 @@
+console.log('EXPORTS=', exports)
+console.log('MODULE=', module)
+console.log('MODULE.EXPORTS=', module.exports)
+console.log('REQUIRE=', require)
+console.log('__FILENAME=', __filename)
+console.log('__DIRNAME=', __dirname)
