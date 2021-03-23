@@ -1,0 +1,23 @@
+
+POST http://143.198.72.178:5000/users/  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "name": "Manas Mishra",
+    "email": "manas.m22@gmail.com",
+    "age": "22"
+}
+
+###
+POST http://143.198.72.178:5000/users/  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "name": "Lakshya Agarwal",
+    "email": "lakshya@gmail.com",
+    "age": "23434"
+}
+
+###
+GET http://143.198.72.178:5000/users/  HTTP/1.1
+Content-Type: application/json 

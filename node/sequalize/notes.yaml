@@ -1,0 +1,15 @@
+sequalize_cli:
+  getting_started:
+    - sudo npm i -g sequelize-cli
+    - In config/config.json, enter database details.
+    - sequalize db:create # To create database if not already created
+    - sequelize model:generate --name [ModelName:User] --attributes [column_name:name]:[type:string],[column_name:email]:[type:string]
+    - files:
+      index.js:
+        - const { sequelize } = require('./models')
+        - async function main(){
+        -   await sequelize.sync()
+        - }
+        - main()
+  create_db:
+    - 

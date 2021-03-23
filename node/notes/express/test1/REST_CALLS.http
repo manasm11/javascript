@@ -1,0 +1,20 @@
+### Course with ID 2
+GET http://143.198.72.178:5000/api/courses/2 HTTP/1.1
+
+### ALL COURSES
+GET http://143.198.72.178:5000/api/courses/ HTTP/1.1
+
+### POST NEW COURSE
+POST http://143.198.72.178:5000/api/courses/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample"
+}
+###
+POST http://143.198.72.178:5000/api/courses/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Testing 123"
+}
