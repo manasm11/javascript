@@ -1,0 +1,14 @@
+GET http://143.198.72.178:8088/ HTTP/1.1
+
+###
+POST http://143.198.72.178:8088/user/ HTTP/1.1
+Content-Type: : application/json
+
+{
+    "name": "Manas Mishra",
+    "email": "manas.m22@gmail.com",
+    "rollNo": 2,
+    "status": "1"
+}
+
+###

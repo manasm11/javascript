@@ -1,8 +1,5 @@
-const express = require('express')
+// DATABASE
 const Sequelize = require('sequelize')
-
-const app = express()
-const PORT = 8088
 
 const sequelize = new Sequelize('pg', "pg", 'testing123321', {
     host: 'localhost',
@@ -30,29 +27,26 @@ const User = sequelize.define('users', {
         type: Sequelize.ENUM('0', '1'),
         defaultValue: '1',
     },
-    // created_at: {
-    //     type: Sequelize.DATE,
-    //     defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-    // },
-    // updated_at: {
-    //     type: Sequelize.DATE,
-    //     defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-    // },
 },{
     modelName: 'User',
-    // timestamps: false,
 })
 
-sequelize.sync()
+// sequelize.authenticate()
+//     .then(function(){
+//         console.log('Database Connected Successfully...')
+//     })
+//     .catch(function(err){
+//         console.log('Error while connecting database...')
+//         console.log(err.original)
+//     })
 
-sequelize.authenticate()
-    .then(function(){
-        console.log('Database Connected Successfully...')
-    })
-    .catch(function(err){
-        console.log('Error while connecting database...')
-        console.log(err.original)
-    })
+// sequelize.sync()
+
+// ENDPOINTS
+const express = require('express')
+const app = express()
+const PORT = 8088
+app.use(express.json())
 
 app.get('/', function(req, res){
     res.status(200).send({
@@ -61,7 +55,10 @@ app.get('/', function(req, res){
     })
 })
 
-// sequelize.authenticate()
+app.post('/user', async function(req, res){
+    await User.create(req.body)
+    res.send({message: 'User Created !', status: 1})
+})
 
 app.listen(PORT, function(){
     console.log(`Application running on PORT ${PORT}...`)
