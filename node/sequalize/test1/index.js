@@ -23,6 +23,11 @@ app.get('/users', async(req, res)=>{
     catch(err) {return res.status(500).send(err)}
 })
 
+app.get('/users/:uuid', async(req, res)=>{
+    try{return res.send(await user.findOne({where: {uuid: req.params.uuid}}))}
+    catch(err) {return res.status(500).send(err)}
+})
+
 // STARTING SERVER
 const PORT = process.env.PORT || 5000
 app.listen({port: PORT}, async ()=>{
